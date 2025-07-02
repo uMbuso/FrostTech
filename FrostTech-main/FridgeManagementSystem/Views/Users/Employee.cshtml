@@ -1,0 +1,167 @@
+﻿@model IEnumerable<FridgeManagementSystem.BLL.DTOs.EmployeeDto>
+
+@{
+    ViewData["Title"] = "Employee";
+}
+
+<div class="card" style="width:100%;margin:0;margin-top:100px;padding:0;border:none!important;">
+    <div class="card-header bg-dark text-white">
+        <h3>Employee List</h3>
+    </div>
+    <div class="card-body" style="width:100%;margin:0;padding:0;">
+        <a class="btn m-2 fw-bold text-white" href="@Url.Action("CreateEmployee")" style="background-color:#104862"><i class="bi bi-person-plus pe-1"></i>Add</a>
+        <table class="table table-striped table-bordered" style="width:100%;margin:0;border-color:#a3a2a3">
+            <thead class="text-white" style="background-color:#146083">
+                <tr>
+                    <th hidden>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th hidden>
+                        @Html.DisplayNameFor(model => model.IdentificationNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </th>
+                    <th hidden>
+                        @Html.DisplayNameFor(model => model.RoleId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Role)
+                    </th>
+                    <th hidden>
+                        @Html.DisplayNameFor(model => model.AddressId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AddressLine1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AddressLine2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.City)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Province)
+                    </th>                  
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td hidden>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td hidden>
+                            @Html.DisplayFor(modelItem => item.IdentificationNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>              
+                        <td hidden>
+                            @Html.DisplayFor(modelItem => item.RoleId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Role)
+                        </td>
+                        <td hidden>
+                            @Html.DisplayFor(modelItem => item.AddressId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AddressLine1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AddressLine2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Province)
+                        </td>
+                        <td class="text-center">
+                            <a class="btn fw-bold text-white" href="@Url.Action("EditEmployee", new {id = item.Id})" style="background-color:#104862">
+                                <i class="bi bi-pencil-square pe-1"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="anchorDetail btn fw-bold text-white bg-danger" data-id="@item.Id"><i class="bi bi-trash pe-1"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <!-- Modal content-->
+        <div class="modal-content" style="margin:0;padding:0;border:none!important">
+            <div class="modal-body" style="margin:0;padding:0;border:none!important">
+                <div class="card" style="margin:0;padding:0">
+                    <div class="card-body text-center">
+                        <h1 class="text-danger"><i class="bi bi-exclamation-circle"></i></h1>
+                        <h2 class="text-danger">Are you sure?</h2>
+                        <p class="card-text text-danger">The record will be permanently deleted!</p>
+                    </div>
+                    <div class="d-flex flex-row-reverse">
+                        <button id="confirmBtn" type="button" class="btn btn-outline-danger btn-sm m-1">Confirm</button>
+                        <button id="closeBtn" type="button" class="btn btn-outline-secondary btn-sm m-1">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        var id = 0;
+        $(function () {
+            $(".anchorDetail").click(function () {
+                var $buttonClicked = $(this);
+                id = $buttonClicked.attr('data-id');
+                var options = { "backdrop": "static", keyboard: true };
+                $('#myModal').modal(options);
+                $("#myModal").modal("toggle");
+            });
+
+            $("#confirmBtn").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: `/Users/Delete/${id}`,
+                    data: JSON.stringify({ ActionView: 'Employee' }),
+                    contentType: "application/json; charset=utf-8",
+                    success: function (result) {
+                        $('#myModal').modal('hide');
+                        $("body").html(result);
+                    },
+                    error: function (data) {
+                        alert("Failed to delete!");
+                    }
+                });
+            });
+
+            $("#closeBtn").click(function () {
+                $('#myModal').modal('hide');
+            });
+        });
+    </script>
+}

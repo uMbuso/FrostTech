@@ -1,0 +1,39 @@
+﻿@model FridgeManagementSystem.BLL.DTOs.UserLoginDto
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="login-main-text">
+            <h2>
+                Welcome to Frost Tech
+            </h2>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <form asp-action="Login" class="login-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <a class="btn fw-bold text-white" href="@Url.Action("Register", "Account")" style="background-color:#104862">
+                    Register
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

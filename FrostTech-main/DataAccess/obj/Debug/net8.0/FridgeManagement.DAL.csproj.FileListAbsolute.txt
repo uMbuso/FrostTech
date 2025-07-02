@@ -1,0 +1,12 @@
+E:\Source\FridgeManagementSystem\DataAccess\bin\Debug\net8.0\FridgeManagement.DAL.deps.json
+E:\Source\FridgeManagementSystem\DataAccess\bin\Debug\net8.0\FridgeManagement.DAL.dll
+E:\Source\FridgeManagementSystem\DataAccess\bin\Debug\net8.0\FridgeManagement.DAL.pdb
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.csproj.AssemblyReference.cache
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.AssemblyInfoInputs.cache
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.AssemblyInfo.cs
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.csproj.CoreCompileInputs.cache
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.dll
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\refint\FridgeManagement.DAL.dll
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\FridgeManagement.DAL.pdb
+E:\Source\FridgeManagementSystem\DataAccess\obj\Debug\net8.0\ref\FridgeManagement.DAL.dll

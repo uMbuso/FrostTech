@@ -1,0 +1,15 @@
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.csproj.AssemblyReference.cache
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.AssemblyInfoInputs.cache
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.AssemblyInfo.cs
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.csproj.CoreCompileInputs.cache
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\bin\Debug\net8.0\FridgeManagementSystem.BLL.deps.json
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\bin\Debug\net8.0\FridgeManagementSystem.BLL.dll
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\bin\Debug\net8.0\FridgeManagementSystem.BLL.pdb
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\bin\Debug\net8.0\FridgeManagement.DAL.dll
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\bin\Debug\net8.0\FridgeManagement.DAL.pdb
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeMa.1B6B18C4.Up2Date
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.dll
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\refint\FridgeManagementSystem.BLL.dll
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\FridgeManagementSystem.BLL.pdb
+E:\Source\FridgeManagementSystem\FridgeManagementSystem.BLL\obj\Debug\net8.0\ref\FridgeManagementSystem.BLL.dll

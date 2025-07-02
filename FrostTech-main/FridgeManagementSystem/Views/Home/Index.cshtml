@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="d-grid gap-2">
+        <a class="btn fw-bold text-white" href="@Url.Action("Customer", "Users")" style="background-color:#104862">
+            <i class="bi bi-pencil-square pe-1"></i>Manage Customers
+        </a>
+        <a class="btn fw-bold text-white" href="@Url.Action("Employee", "Users")" style="background-color:#104862">
+            <i class="bi bi-pencil-square pe-1"></i>Manage Employees
+        </a>
+        <a class="btn fw-bold text-white" href="@Url.Action("Customer", "Users")" style="background-color:#104862">
+            <i class="bi bi-pencil-square pe-1"></i>Profile Requests
+        </a>
+        <a class="btn fw-bold text-white" href="@Url.Action("Index", "Roles")" style="background-color:#104862">
+            <i class="bi bi-pencil-square pe-1"></i>Manage Roles
+        </a>
+        <a class="btn fw-bold text-white" href="@Url.Action("Index", "FridgeAllocation")" style="background-color:#104862">
+            <i class="bi bi-pencil-square pe-1"></i>Fridge Requests
+        </a>
+    </div>
+</div>
